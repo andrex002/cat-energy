@@ -1,0 +1,32 @@
+.logo[href] {
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.logo__icon {
+  display: block;
+}
+.logo__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: @tablet-width) {
+  .logo__icon {
+    width: 173px;
+    height: 58px;
+  }
+  .logo__text {
+    display: none;
+  }
+}
+@media (min-width: @desktop-width) {
+  .logo__icon {
+    width: 202px;
+    height: 59px;
+  }
+}
