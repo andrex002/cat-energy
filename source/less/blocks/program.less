@@ -1,0 +1,147 @@
+.program {
+  position: relative;
+  padding: 7px 20px 18px 20px;
+  background-color: #f2f2f2;
+}
+.program__title {
+  padding-left: 71px;
+  margin-bottom: 29px;
+  font-size: 24px;
+  line-height: 37/24;
+  font-weight: 400;
+  color: #111;
+  text-transform: uppercase;
+}
+.program__logo {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #68b738;
+}
+.program__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  &--slim {
+    top: 45%;
+  }
+}
+.program__text {
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18/14;
+  border-bottom: 1px solid #d9d9d9;
+  & br {
+    display: none;
+  }
+}
+.program__link {
+  position: relative;
+  color: #111;
+  line-height: 1;
+  text-transform: uppercase;
+  padding-right: 11px;
+  background-color: #f2f2f2;
+  z-index: 1;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    width: 32px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: right 0.3s;
+    z-index: -1;
+  }
+  &:hover {
+    &::after {
+      right: -32px;
+    }
+  }
+}
+@media (min-width: @tablet-width) {
+  .program {
+    padding: 40px 275px 58px 52px;
+  }
+  .program__title {
+    padding-left: 0;
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 1;
+  }
+  .program__text {
+    margin-bottom: 34px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 0;
+    & br {
+      display: inline;
+    }
+  }
+  .program__link {
+    padding-right: 24px;
+    font-size: 20px;
+  }
+  .program__logo {
+    top: 92px;
+    left: auto;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+  }
+  .program__icon {
+    &--slim {
+      top: 42%;
+      width: 140px;
+      height: 194px;
+    }
+    &--pro {
+      width: 268px;
+      height: 112px;
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .program {
+    padding: 41px 53px 58px 53px;
+    width: 570px;
+  }
+  .program__title {
+    padding-left: 161px;
+    margin-bottom: 73px;
+  }
+  .program__logo {
+    top: 47px;
+    right: auto;
+    left: 52px;
+    width: 100px;
+    height: 100px;
+  }
+  .program__icon {
+    &--slim {
+      width: 70px;
+      height: 97px;
+    }
+    &--pro {
+      width: 134px;
+      height: 56px;
+    }
+  }
+  .program__text {
+    margin-bottom: 9px;
+    & br {
+      display: none;
+    }
+  }
+}

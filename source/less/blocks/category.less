@@ -1,0 +1,29 @@
+.category__wrapper {
+  .centering();
+}
+.category__list {
+  .list-reset();
+}
+.category__item {
+  margin-bottom: 20px;
+}
+@media (min-width: @tablet-width) {
+  .category__wrapper {
+    .centering(@tablet-width, 30px);
+  }
+  .category__item {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .category__wrapper {
+    .centering(@desktop-width, 110px);
+  }
+  .category__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .category__item:nth-child(2n) {
+    margin-left: auto;
+  }
+}

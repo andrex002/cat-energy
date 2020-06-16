@@ -137,9 +137,16 @@
   .main-nav {
     padding: 54px 0;
   }
+  .main-nav__item {
+    margin-left: 34px;
+  }
   .main-nav__link {
     padding: 12px 0;
     font-size: 20px;
     line-height: 1.243;
+    color: @main-bg;
+    &:not([href])::after {
+      background-color: #fff;
+    }
   }
 }
